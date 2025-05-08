@@ -11,3 +11,8 @@ end
 
 gem 'github-pages'
 gem 'connection_pool', '2.5.0'
+
+# Corrige o erro de timezone no Windows
+platforms :mingw, :mswin, :x64_mingw, :jruby do
+  gem 'tzinfo-data'
+end
